@@ -1,0 +1,49 @@
+<header class="position-sticky sticky-top">
+  <nav class="navbar nav-menu navbar-expand-sm navbar-dark d-flex justify-content-end justify-content-sm-center">
+    <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" (click)="onClickCollapsedNav(offcanvas)"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="d-none d-sm-block justify-content-center" tabindex="-1" id="navbarNav">
+    <ul class="navbar-nav pe-3">
+      <li class="nav-item ms-2">
+        <a class="nav-link" id="home-btn" href="#welcome" (click)="onClickNotCollapseNavLink($event)">Home</a>
+      </li>
+      <li class="nav-item ms-2">
+        <a class="nav-link" id="projects-btn" href="#portfolio"  (click)="onClickNotCollapseNavLink($event)">Proyectos</a>
+      </li>
+      <li class="nav-item ms-2">
+        <a class="nav-link" id="about-me-btn" href="#about-me" (click)="onClickNotCollapseNavLink($event)">Sobre mí</a>
+      </li>
+      <li class="nav-item ms-2 me-lg-2">
+        <a id="contact-btn" class="nav-link contact-btn" href="#contact" style="background-color: #9A8735;"
+           (click)="onClickNotCollapseNavLink($event)">Contacto</a>
+      </li>
+    </ul>
+  </div>
+    <ng-template #offcanvas let-offcanvas class="offcanvas offcanvas-end">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white" (click)="offcanvas.dismiss('Cross click')" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item ms-2">
+            <a class="nav-link" href="#welcome" (click)="onClickOffcanvasLink($event)">Home</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link"
+               href="#portfolio" (click)="onClickOffcanvasLink($event)">Proyectos</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link" href="#about-me" (click)="onClickOffcanvasLink($event)">Sobre mí</a>
+          </li>
+          <li class="nav-item ms-2 me-lg-2">
+            <a class="nav-link contact-btn" href="#contact" style="background-color: #9A8735;"
+               (click)="onClickOffcanvasLink($event)">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </ng-template>
+  </nav>
+</header>

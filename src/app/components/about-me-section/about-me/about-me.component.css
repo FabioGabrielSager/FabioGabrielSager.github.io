@@ -1,0 +1,34 @@
+#about-me {
+  height: fit-content;
+  color: white;
+}
+
+.studies-container {
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+}
+
+#studies-list {
+  list-style-position: outside;
+}
+
+#studies-list li {
+  color: rgb(128, 128, 128);
+  font-size: 30px;
+  padding-left: 10px;
+  position: relative;
+  left: -12px;
+}
+
+#studies-list li div {
+  color: white;
+  font-size: 16px;
+}
+
+#techs {
+  width: fit-content;
+}
+
+strong {
+  color: #33ffe0;
+}

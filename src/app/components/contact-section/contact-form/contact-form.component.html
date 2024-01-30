@@ -1,0 +1,44 @@
+<div class="form-container rounded-3 shadow-lg p-3">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-4">
+      <input type="email" class="form-control bg-transparent border-primary text-light"
+             id="email-input" placeholder="Correo" aria-describedby="emailHelp"
+             formControlName="email"
+             [class.is-invalid]="form.controls['email'].invalid
+             && (form.controls['email'].touched || form.controls['email'].dirty)">
+
+      <div class="invalid-feedback" *ngIf="form.controls['email'].invalid
+             && (form.controls['email'].touched || form.controls['email'].dirty)">
+        <span *ngIf="form.controls['email'].hasError('required')">Este campo es requerido.</span>
+        <span *ngIf="form.controls['email'].hasError('email')">Debe ingresar una dirección de email válida.</span>
+      </div>
+    </div>
+    <div class="mb-4">
+      <input type="text" class="form-control bg-transparent border-primary text-light"
+             placeholder="Asunto" id="subject-input"
+             formControlName="subject"
+             [class.is-invalid]="form.controls['subject'].invalid
+             && (form.controls['subject'].touched || form.controls['subject'].dirty)">
+
+      <div class="invalid-feedback" *ngIf="form.controls['subject'].invalid
+             && (form.controls['subject'].touched || form.controls['subject'].dirty)">
+        <span *ngIf="form.controls['subject'].hasError('required')">Este campo es requerido.</span>
+      </div>
+    </div>
+    <div class="mb-3">
+      <textarea class="form-control bg-transparent border-primary text-light" id="message"
+                rows="5" placeholder="Mensaje"
+                formControlName="message"
+                [class.is-invalid]="form.controls['message'].invalid
+                && (form.controls['message'].touched || form.controls['message'].dirty)"></textarea>
+
+      <div class="invalid-feedback" *ngIf="form.controls['message'].invalid
+             && (form.controls['message'].touched || form.controls['message'].dirty)">
+        <span *ngIf="form.controls['message'].hasError('required')">Este campo es requerido.</span>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button type="submit" class="btn btn-outline-primary text-light">Enviar</button>
+    </div>
+  </form>
+</div>

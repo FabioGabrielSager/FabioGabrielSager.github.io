@@ -1,0 +1,22 @@
+.nav-menu {
+  background-color: rgba(0, 1, 47, 0.8);
+}
+
+.nav-menu * {
+  color: #ffffff;
+}
+
+.nav-link {
+  border-radius: 50px;
+  text-align: center;
+}
+
+.nav-link:hover {
+  transform: scale(1.025);
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.nav-link.active {
+  transform: scale(1.025);
+  background-color: rgba(255, 255, 255, 0.10);
+}

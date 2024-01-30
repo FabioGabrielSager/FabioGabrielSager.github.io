@@ -1,0 +1,16 @@
+#contact {
+  background-color: #050650;
+  color: white;
+}
+
+#contact div {
+  height: fit-content;
+}
+
+.grid {
+  grid-template-columns: 2fr 1fr;
+}
+
+.email-container input {
+  color: white;
+}

@@ -1,0 +1,20 @@
+.form-container {
+  background-color: #0b0c6c;
+  width: 75%;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.invalid-feedback {
+  font-size: smaller;
+  font-style: italic;
+}
+
+@media (max-width: 992px) {
+  .form-container {
+    width: 100%;
+  }
+}

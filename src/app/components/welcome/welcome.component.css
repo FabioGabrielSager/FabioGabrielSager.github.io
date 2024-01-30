@@ -1,0 +1,49 @@
+* {
+  color: white;
+}
+
+.btn {
+  border-radius: 50px;
+  text-align: center;
+  background-color: #4648AB;
+}
+
+.content {
+  height: 100vh;
+}
+
+img {
+  width: 30%;
+  border-radius: 50%;
+  opacity: 0.05;
+}
+
+@keyframes row-icon-an  {
+   0% {opacity: 0.5;}
+   50% {opacity: 1;}
+   100% {opacity: 0.5;}
+}
+
+#row-icon {
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  will-change: opacity;
+  animation-name: row-icon-an;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 0;
+}
+
+@media (orientation: portrait) {
+  img {
+    width: auto;
+    height: 30%;
+  }
+}
+
+@media (max-height: 510px) {
+  #row-icon {
+    display: none;
+  }
+}

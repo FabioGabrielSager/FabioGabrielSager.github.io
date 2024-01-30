@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-background-color: #010245;
+}
+
+body {
+  background-color: #010245;
+  font-family: Onest Variable,system-ui,sans-serif;
+}
