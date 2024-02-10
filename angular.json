@@ -46,7 +46,14 @@
                 }
               ],
               "outputHashing": "all",
-              "optimization": true
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": true
+                },
+                "fonts": true
+              }
             },
             "development": {
               "buildOptimizer": false,
@@ -93,6 +100,12 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "noBuild": true
           }
         }
       }

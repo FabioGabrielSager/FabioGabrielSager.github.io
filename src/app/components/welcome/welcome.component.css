@@ -32,7 +32,7 @@ img {
   animation-name: row-icon-an;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: 0;
+  animation-iteration-count: infinite;
 }
 
 @media (orientation: portrait) {
