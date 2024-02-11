@@ -8,8 +8,8 @@ describe('TechsReadMoreModalComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TechsReadMoreModalComponent]
-    });
+    imports: [TechsReadMoreModalComponent]
+});
     fixture = TestBed.createComponent(TechsReadMoreModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -8,8 +8,8 @@ describe('ToastContainerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ToastContainerComponent]
-    });
+    imports: [ToastContainerComponent]
+});
     fixture = TestBed.createComponent(ToastContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

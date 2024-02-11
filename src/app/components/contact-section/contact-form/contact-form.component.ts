@@ -1,14 +1,17 @@
 import {Component, OnDestroy} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from "@angular/forms";
 import {EmailService} from "../../../services/email.service";
 import {EmailData} from "../../../models/EmailData";
 import {Subscription} from "rxjs";
 import {ToastService} from "../../../services/toast.service";
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-contact-form',
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css']
+    selector: 'app-contact-form',
+    templateUrl: './contact-form.component.html',
+    styleUrls: ['./contact-form.component.css'],
+    standalone: true,
+    imports: [ReactiveFormsModule, NgIf]
 })
 export class ContactFormComponent implements OnDestroy {
   form: FormGroup = this.fb.group({});

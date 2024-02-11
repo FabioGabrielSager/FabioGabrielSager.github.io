@@ -2,9 +2,10 @@ import {Component, ElementRef, HostListener, inject, Renderer2, ViewChild} from 
 import {NgbActiveOffcanvas, NgbOffcanvas} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css'],
+    standalone: true
 })
 export class HeaderComponent {
   private clickedLinkId: string = "";
