@@ -1,5 +1,5 @@
 import {Component, TemplateRef} from '@angular/core';
-import {Toast, ToastService} from "../../../services/toast.service";
+import {Toast, ToastService} from "../../services/toast.service";
 import { NgbToast } from '@ng-bootstrap/ng-bootstrap';
 import { NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
 
