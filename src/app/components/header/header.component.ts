@@ -48,7 +48,6 @@ export class HeaderComponent {
       } else {
         this.targetSection.scrollIntoView({behavior: 'smooth'});
       }
-      this.targetSection = null;
     }
   }
 
