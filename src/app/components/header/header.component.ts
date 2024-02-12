@@ -48,6 +48,7 @@ export class HeaderComponent {
       } else {
         this.targetSection.scrollIntoView({behavior: 'smooth'});
       }
+      this.targetSection = null;
     }
   }
 
@@ -72,7 +73,7 @@ export class HeaderComponent {
       const sectionHeight = sectionElement.offsetHeight;
 
       if (this.targetSection == null) {
-        if (scrollPosition >= sectionOffset - 200 && scrollPosition < (sectionOffset + sectionHeight) - 200) {
+        if (scrollPosition >= sectionOffset - 300 && scrollPosition < (sectionOffset + sectionHeight) - 300) {
           this.renderer.addClass(linkElement, 'active');
         } else {
           this.renderer.removeClass(linkElement, 'active');
@@ -81,8 +82,8 @@ export class HeaderComponent {
         const clickedSectionOffset = this.targetSection.offsetTop;
         const clickedSectionHeight = this.targetSection.offsetHeight;
 
-        if (scrollPosition >= clickedSectionOffset - 200
-          && scrollPosition < (clickedSectionOffset + clickedSectionHeight) - 200
+        if (scrollPosition >= clickedSectionOffset - 300
+          && scrollPosition < (clickedSectionOffset + clickedSectionHeight) - 300
           && this.clickedLinkId != "") {
           this.clickedLinkId = "";
           this.targetSection = null;
