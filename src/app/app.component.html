@@ -2,6 +2,10 @@
 <app-welcome></app-welcome>
 <app-porfolio></app-porfolio>
 <app-about-me></app-about-me>
-<app-contact></app-contact>
-<app-footer></app-footer>
-<app-toast-container></app-toast-container>
+<app-contact #contactComponent></app-contact>
+@defer (on viewport(contactComponent)) {
+  <app-footer></app-footer>
+}
+@defer {
+  <app-toast-container></app-toast-container>
+}

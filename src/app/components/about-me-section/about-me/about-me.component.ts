@@ -1,6 +1,5 @@
 import {Component, inject} from '@angular/core';
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {TechsReadMoreModalComponent} from "../techs-read-more-modal/techs-read-more-modal.component";
 
 @Component({
     selector: 'app-about-me',
@@ -11,7 +10,8 @@ import {TechsReadMoreModalComponent} from "../techs-read-more-modal/techs-read-m
 export class AboutMeComponent {
   private modalService = inject(NgbModal);
 
-  openTechsModal() {
+  async openTechsModal() {
+    const {TechsReadMoreModalComponent} = await import('../techs-read-more-modal/techs-read-more-modal.component');
     const modalRef = this.modalService.open(TechsReadMoreModalComponent,
       {size: 'lg', centered: true});
   }
