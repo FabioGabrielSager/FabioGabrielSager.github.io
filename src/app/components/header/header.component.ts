@@ -41,7 +41,7 @@ export class HeaderComponent {
 
   private scrollToSection(sectionId: string) {
     this.targetSection = document.getElementById(sectionId);
-
+    window.history.pushState({}, '', `#${sectionId}`);
     if (this.targetSection) {
       if (sectionId == "welcome") {
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -55,7 +55,6 @@ export class HeaderComponent {
   onScroll(event: Event): void {
 
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
     this.toggleActiveClass('welcome', "home-btn", scrollPosition);
     this.toggleActiveClass('about-me', "about-me-btn", scrollPosition);
     this.toggleActiveClass('portfolio', "projects-btn", scrollPosition);
@@ -65,7 +64,6 @@ export class HeaderComponent {
   private toggleActiveClass(sectionId: string, linkId: string, scrollPosition: number): void {
     const sectionElement = document.getElementById(sectionId);
     const linkElement = this.el.nativeElement.querySelector(`#${linkId}`);
-
 
     if (sectionElement && linkElement) {
       const sectionOffset = sectionElement.offsetTop;
