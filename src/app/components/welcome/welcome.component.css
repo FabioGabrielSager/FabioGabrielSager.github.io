@@ -13,9 +13,9 @@
 }
 
 img {
-  width: 30%;
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
-  opacity: 0.05;
 }
 
 @keyframes row-icon-an  {
@@ -37,13 +37,20 @@ img {
 
 @media (orientation: portrait) {
   img {
-    width: auto;
-    height: 30%;
+    width: 30vh;
+    height: 30vh;
   }
 }
 
 @media (max-height: 510px) {
   #row-icon {
     display: none;
+  }
+}
+
+@media (min-width: 1399px) {
+  img {
+    width: 500px;
+    height: 500px;
   }
 }
