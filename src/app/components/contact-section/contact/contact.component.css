@@ -14,3 +14,14 @@
 .email-container input {
   color: white;
 }
+
+@media (min-height: 1079px) {
+  #contact {
+    display: flex;
+    height: 80vh;
+  }
+
+  #contact div {
+    align-self: center;
+  }
+}
