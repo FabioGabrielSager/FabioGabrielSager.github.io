@@ -1,0 +1,48 @@
+article {
+  background-color: #0d0d58;
+}
+
+.btn {
+  color: white;
+}
+
+a:hover {
+  transform: scale(1.025);
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.project-image {
+  width: 25%;
+}
+
+.project-data {
+  width: 75%;
+}
+
+@media (max-width: 576px) {
+  .project-image {
+    width: 100%;
+  }
+  .project-data {
+    width: 100%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .project-image {
+    width: 70%;
+  }
+  .project-data {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .project-image {
+    width: 50%;
+  }
+
+  .project-data {
+    width: 50%;
+  }
+}

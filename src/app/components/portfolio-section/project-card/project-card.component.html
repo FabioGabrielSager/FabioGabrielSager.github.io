@@ -1,0 +1,28 @@
+<article class="d-flex flex-column flex-md-row justify-content-center column-gap-5 shadow rounded-2 p-3">
+  @if (cardData != undefined) {
+    <div class="d-flex justify-content-center d-md-none">
+      <div class="project-image">
+        <img [src]="cardData.imageSrc" class="rounded-2" style="width: 100%" >
+      </div>
+    </div>
+    <div class="project-image d-none d-md-block">
+      <img [src]="cardData.imageSrc" class="rounded-2" style="width: 100%">
+    </div>
+  }
+  <div class="project-data mt-3 mt-lg-0">
+    <h2 class="text-info">{{ cardData?.title }}</h2>
+    <ng-content></ng-content>
+    <p class="mt-3">{{ cardData?.description }}</p>
+    @if (cardData?.createdWith != undefined) {
+      <p>Creado desde cero con  {{ cardData?.createdWith?.join(', ') }}</p>
+    }
+    @if (cardData?.webSiteLinK) {
+      <a [href]="cardData?.webSiteLinK" target="_blank" class="btn btn-outline-primary rounded-5 card-link">Sitio
+        web</a>
+    }
+    @if (cardData?.sourceCodeLink) {
+      <a [href]="cardData?.sourceCodeLink" target="_blank"
+         class="btn btn-outline-info text-info rounded-5 ms-0 mt-1 card-link">Código fuente</a>
+    }
+  </div>
+</article>
