@@ -2,7 +2,7 @@ import {Component, OnDestroy} from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from "@angular/forms";
 import {EmailService} from "../../../services/email.service";
 import {EmailData} from "../../../models/EmailData";
-import {Subscription} from "rxjs";
+import {Subscription, takeUntil} from "rxjs";
 import {ToastService} from "../../../services/toast.service";
 import { NgIf } from '@angular/common';
 
@@ -18,9 +18,9 @@ export class ContactFormComponent implements OnDestroy {
   private subs: Subscription = new Subscription();
   constructor(private fb: FormBuilder, private emailService: EmailService, private toastService: ToastService) {
     this.form = this.fb.group({
-      email: ["", [Validators.required, Validators.email]],
-      subject: ["", [Validators.required]],
-      message: ["", [Validators.required]]
+      email: [{ value: "", disabled: true}, [Validators.required, Validators.email]],
+      subject: [{ value: "", disabled: true}, [Validators.required]],
+      message: [{ value: "", disabled: true}, [Validators.required]]
     })
   }
 

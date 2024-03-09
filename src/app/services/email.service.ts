@@ -10,6 +10,6 @@ export class EmailService {
   constructor(private httpClient: HttpClient) { }
 
   sendEmail(content: EmailData): Observable<any> {
-    return this.httpClient.post("http://localhost:8080/portfolio/send/", content);
+    return this.httpClient.post("", content);
   }
 }
