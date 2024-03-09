@@ -10,6 +10,6 @@ export class EmailService {
   constructor(private httpClient: HttpClient) { }
 
   sendEmail(content: EmailData): Observable<any> {
-    return this.httpClient.post("", content);
+    return this.httpClient.post("https://porfolio-email-sender-api.onrender.com/portfolio/send/", content);
   }
 }

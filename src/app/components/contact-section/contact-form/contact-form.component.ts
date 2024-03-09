@@ -18,9 +18,9 @@ export class ContactFormComponent implements OnDestroy {
   private subs: Subscription = new Subscription();
   constructor(private fb: FormBuilder, private emailService: EmailService, private toastService: ToastService) {
     this.form = this.fb.group({
-      email: [{ value: "", disabled: true}, [Validators.required, Validators.email]],
-      subject: [{ value: "", disabled: true}, [Validators.required]],
-      message: [{ value: "", disabled: true}, [Validators.required]]
+      email: [{ value: "", disabled: false}, [Validators.required, Validators.email]],
+      subject: [{ value: "", disabled: false}, [Validators.required]],
+      message: [{ value: "", disabled: false}, [Validators.required]]
     })
   }
 
