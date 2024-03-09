@@ -35,13 +35,21 @@ export class ContactFormComponent implements OnDestroy {
     newEmail.subject = this.form.controls['subject'].value;
     newEmail.text = this.form.controls['message'].value;
 
+    this.toastService.show("El mensaje se esta enviendo, esto puede tardar unos segundos",
+      "bg-info text-light");
+
     this.subs.add(this.emailService.sendEmail(newEmail).subscribe(
       {
-        next: value => { this.toastService.show("Mensaje enviado con éxito!", "bg-success text-light") },
+        next: value => {
+          this.toastService.show("Mensaje enviado con éxito!", "bg-success text-light");
+          this.form.reset();
+        },
         error: err => { this.toastService.show("Hubo un error al intentar enviar el mensaje.",
           "bg-danger text-light") }
       }
-    ))
+    ));
+
+
   }
 
   ngOnDestroy(): void {
