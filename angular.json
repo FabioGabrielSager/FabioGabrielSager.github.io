@@ -46,14 +46,7 @@
                 }
               ],
               "outputHashing": "all",
-              "optimization": {
-                "scripts": true,
-                "styles": {
-                  "minify": true,
-                  "inlineCritical": true
-                },
-                "fonts": true
-              }
+              "optimization": true
             },
             "development": {
               "buildOptimizer": false,
