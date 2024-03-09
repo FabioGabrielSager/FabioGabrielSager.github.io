@@ -35,7 +35,7 @@ export class ContactFormComponent implements OnDestroy {
     newEmail.subject = this.form.controls['subject'].value;
     newEmail.text = this.form.controls['message'].value;
 
-    this.toastService.show("El mensaje se esta enviendo, esto puede tardar unos segundos",
+    this.toastService.show("El mensaje se esta enviando, esto puede tardar unos segundos",
       "bg-info text-light");
 
     this.subs.add(this.emailService.sendEmail(newEmail).subscribe(
