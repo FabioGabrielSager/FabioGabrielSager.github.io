@@ -38,6 +38,26 @@ export class PortfolioComponent {
       imageSrc: "assets/projects/inventory.webp"
     } as CardData
 
+    const RallyRoundCard: CardData = {
+      title: "RallyRound",
+      description: "RallyRound es una aplicación desarrollada en el marco del Trabajo Práctico Integrador Final de la " +
+        "Tecnicatura Universitaria en Programación de la UTN-FRC en 2024. Esta plataforma resuelve la dificultad de " +
+        "organizar y reunir participantes para eventos sociales. Con RallyRound, los usuarios pueden crear, gestionar " +
+        "y unirse a eventos, aprovechando funcionalidades como la búsqueda eficiente de participantes, gestión de pagos" +
+        " integrada, y comunicación en tiempo real a través de chats. Además, la aplicación cuenta con actualización" +
+        " automática del estado de los eventos y notificaciones instantáneas, ofreciendo herramientas avanzadas " +
+        "para la administración de actividades y reportes. RallyRound garantiza una experiencia fluida y completa" +
+        " para la organización de cualquier tipo de evento social.",
+      sourceCodeLink: "https://github.com/FabioGabrielSager/RallyRound/tree/main",
+      createdWith: [
+        "Spring Boot", "Spring Security", "Spring Data JPA", "JWT", "WebSockets",
+        "Mercado Pago", "Bing Maps API", "Reactor", "Angular", "Bootstrap", "rx-stomp", "bootstrap",
+        "chat-js", "PostgreSQL"
+      ],
+      imageSrc: "assets/projects/RallyRound.webp"
+    } as CardData
+
+    this.cards.push(RallyRoundCard)
     this.cards.push(SimplyChessCard);
     this.cards.push(InventoryApiCard)
   }
