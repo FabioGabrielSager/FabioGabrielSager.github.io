@@ -8,11 +8,11 @@
   column-gap: 20px;
 }
 
-#studies-list {
+.connected-list {
   list-style-position: outside;
 }
 
-#studies-list li {
+.connected-list li {
   color: rgb(128, 128, 128);
   font-size: 30px;
   padding-left: 10px;
@@ -20,7 +20,7 @@
   left: -12px;
 }
 
-#studies-list li div {
+.connected-list li div {
   color: white;
   font-size: 16px;
 }
